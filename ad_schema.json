@@ -4,6 +4,12 @@
     "groups" : [
         {
             "name": "IT Support"
+        },
+        {
+            "name": "Employees"
+        },
+        {
+            "name": "Secure Operations Center"
         }
     ],
 
@@ -12,14 +18,16 @@
             "name": "John Hammond",
             "password": "RubyC01ffe",
             "groups"    : [
-                "IT Support"
+                "Secure Operations Center",
+                "employees"
             ]
         },
         {
             "name": "Alice Lice",
             "password": "Sh3GotIT!",
             "groups"    : [
-                "IT Support"
+                "IT Support",
+                "employees"
             ]
         }
     ]
