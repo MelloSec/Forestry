@@ -3,14 +3,59 @@
 
     "groups" : [
         {
-            "name": "IT Support"
+            "name": "IT-Support"
         },
         {
             "name": "Employees"
         },
         {
-            "name": "Secure Operations Center"
-        }
+            "name": "Administrators"
+        },
+        {
+            "name": "Domain Administrators"
+        },
+        {
+            "name": "Bosses"
+        },
+        {
+            "name": "NetworkOperations"
+        },
+        {
+            "name": "Cloud"
+        },
+        {
+            "name": "SecurityOperationsCenter"
+        },
+        {
+            "name": "Accounting"
+        },
+        {
+            "name": "Estimating"
+        },
+        {
+            "name": "ProjectManagement"
+        },
+        {
+            "name": "Warehouse"
+        },
+        {
+            "name": "Shop"
+        },
+        {
+            "name": "HumanResources"
+        },
+        {
+            "name": "BusinessDevelopment"
+        },
+        {
+            "name": "Field"
+        },
+        {
+            "name": "Safety"
+        },
+        {
+            "name": "Legal"
+        },
     ],
 
     "users": [
@@ -29,6 +74,38 @@
                 "IT Support",
                 "employees"
             ]
-        }
+        },
+        {
+            "name": "Mello Naut",
+            "password": "Mell0wfatz",
+            "groups"    : [
+                "IT Support",
+                "employees",
+                "Administrators",
+                "Cloud"
+            ]
+        },
+        {
+            "name": "Mike Check",
+            "password": "0naboat!",
+            "groups"    : [
+                "Administrators",
+                "employees",
+                "NetworkOperations",
+                "Cloud",
+                "IT Support",
+                "Domain Administrators"
+            ]
+        },
+        {
+            "name": "Boss Hog",
+            "password": "0nCANDY!",
+            "groups"    : [
+                "Accounting",
+                "Bosses",
+                "employees",
+                "Cloud",
+            ]
+        },
     ]
 }
