@@ -1,25 +1,18 @@
 {
-    "users": [
+    "domain": "mellosec.sunn", 
 
+    "groups" : [
         {
-          "first_name": "John",
-           "last_name": "Hammond",
+            "name": "Estimating"
+        }
+    ],    
+    "users": [
+        {
+            "name": "John Hammond",
             "password": "RubyC01ffe",
-            "username": "jhammond",
             "groups"    : [
-                "estimating",
-                "cloud"
+                "Estimating"
             ]
-        },
-        {
-            "first_name": "Sexy",
-             "last_name": "Mike",
-              "password": "OnBoats!",
-              "username": "msexy",
-              "groups"    : [
-                  "domain admin",
-                  "cloud"
-              ]
-          }
+        }
     ]
 }
