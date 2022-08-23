@@ -3,16 +3,17 @@
 
     "groups" : [
         {
-            "name": "Estimating",
+            "name": "Employees",
             "name": "IT Support"
         }
-    ],    
+    ],
+        
     "users": [
         {
             "name": "John Hammond",
             "password": "RubyC01ffe",
             "groups"    : [
-                "Estimating"
+                "Employees"
             ]
         },
         {

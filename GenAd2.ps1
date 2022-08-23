@@ -18,8 +18,7 @@ function RemoveADGroup(){
 }
 
 function CreateADUser(){
-    param( [Parameter(Mandatory=$true)] $userObject )
-
+    param( [Parameter(Mandatory=$true)] $userObject ) 
     # Pull out the name from the JSON object
     $name = $userObject.name
     $password = $userObject.password
