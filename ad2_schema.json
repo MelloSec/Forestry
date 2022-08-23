@@ -4,6 +4,9 @@
     "groups" : [
         {
             "name": "Employees"
+        },
+        {
+            "name": "Project Managers"
         }
     ],
 
