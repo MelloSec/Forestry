@@ -36,7 +36,7 @@ function Create-ADUSer(){
 }
 
 # $json = ( Get-Content $JSONFile | ConvertFrom-Json )
-$json = $JSONFile | ConvertFrom-Json
+$json = ( Get-Content $JSONFile | ConvertFrom-Json )
 
 $Global:Domain = $json.domain
 
