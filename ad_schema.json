@@ -1,0 +1,25 @@
+{
+    "users": [
+
+        {
+          "first_name": "John",
+           "last_name": "Hammond",
+            "password": "RubyC01ffe",
+            "username": "jhammond",
+            "groups"    : [
+                "estimating",
+                "cloud"
+            ]
+        },
+        {
+            "first_name": "Sexy",
+             "last_name": "Mike",
+              "password": "OnBoats!",
+              "username": "msexy",
+              "groups"    : [
+                  "domain admin",
+                  "cloud"
+              ]
+          }
+    ]
+}
