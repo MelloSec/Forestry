@@ -3,7 +3,8 @@
 
     "groups" : [
         {
-            "name": "Estimating"
+            "name": "Estimating",
+            "name": "IT Support"
         }
     ],    
     "users": [
@@ -12,6 +13,13 @@
             "password": "RubyC01ffe",
             "groups"    : [
                 "Estimating"
+            ]
+        },
+        {
+            "name": "Alice Lice",
+            "password": "Sh3GotIT!",
+            "groups"    : [
+                "IT Support"
             ]
         }
     ]
