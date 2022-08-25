@@ -1,5 +1,4 @@
 # Workstation
-
 $Domain = 'mellosec.sunn'
 $DC1 = '192.168.0.83'
 $InterfaceIndex = (Get-NetAdapter).ifIndex
@@ -39,6 +38,7 @@ choco install -y --ignore-checksums procdot
 choco install -y --ignore-checksums fiddler
 choco install -y --ignore-checksums regshot
 choco install -y --ignore-checksums dnscrypt-proxy
+
 # house keeping
 Disable-BingSearch
 Set-TaskbarOptions -Dock Bottom
@@ -46,8 +46,6 @@ Set-ExplorerOptions -showHiddenFilesFoldersDrives -showFileExtensions
 Enable-PSRemoting -Force
 Update-Help
 Enable-RemoteDesktop
-
-
 
 function Install-Sysmon ($sysmonDir = 'C:\sysmon') {
     if(!(Test-Path -Path $sysmonDir)){
