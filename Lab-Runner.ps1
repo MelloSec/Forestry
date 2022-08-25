@@ -1,3 +1,9 @@
+# This will serve as script to run configuration remotely with PSRemoting
+
+
+
+
+
 # Domain Controller
 $Domain = 'MelloSec.sunn'
 $DSRMPassword = 'Password123!'

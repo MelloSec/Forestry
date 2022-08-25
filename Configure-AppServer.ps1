@@ -22,14 +22,15 @@ Enable-PSRemoting -Force
 Update-Help
 Enable-RemoteDesktop
 
-choco install git -y
-choco install poshgit -y
-choco install vscode -y
-choco install x64dbg.portable -y
-choco install sysinternals -y
-choco install procmon -y
-choco install procdot -y
-choco install processhacker -y
+choco install git -y --ignore-checksums
+choco install poshgit -y --ignore-checksums
+choco install vscode -y --ignore-checksums
+choco install x64dbg.portable -y --ignore-checksums
+choco install sysinternals -y --ignore-checksums
+choco install procmon -y --ignore-checksums
+choco install procdot -y --ignore-checksums
+choco install processhacker -y --ignore-checksums
+choco install zerotier-one -y --ignore-checksums
 
 function Install-Sysmon ($sysmonDir = 'C:\sysmon') {
     if(!(Test-Path -Path $sysmonDir)){
