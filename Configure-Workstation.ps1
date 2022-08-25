@@ -34,10 +34,14 @@ choco install -y --ignore-checksums dependencywalker
 choco install -y --ignore-checksums ilspy
 choco install -y --ignore-checksums dnspy
 choco install -y --ignore-checksums procmon
-choco install -y --ignore-checksums procdot
 choco install -y --ignore-checksums fiddler
 choco install -y --ignore-checksums regshot
 choco install -y --ignore-checksums dnscrypt-proxy
+
+# # ProcDot
+# if(!(Test-Path 'C:\Tools')){ mkdir 'C:\Tools' }
+# if(!(Test-Path 'C:\Tools\ProcDot')) { mkdir 'C:\Tools\ProcDot'; iwr -useb https://www.procdot.com/download/procdot/binaries/procdot_1_22_57_windows.zip -o 'C:\Tools\ProcDot\procdot.zip'; cd 'C:\Tools\ProcDot'}
+# if(test-path .\ProcDot.zip) { Expand-Archive .\procdot.zip }
 
 # house keeping
 Disable-BingSearch
