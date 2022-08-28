@@ -1,47 +1,430 @@
 {
-    "domain": "mellosec.sunn",
-
-    "groups" : [
-        {
-            "name": "Employees"
-        },
-        {
-            "name": "ProjectManagers"
-        }
-    ],
-
-    "users": [
-
-        {
-            "local_admin": ["ws01"],
-            "name": "Supes Entendant",
-            "password":"bUbbles66",
-            "groups": [
-                "ProjectManagers"
-            ]
-        },
-        {
-            "name": "Bob Ob",
-            "password":"ashley",
-            "groups": [
-                "Employees"
-            ]
-        },
-        {
-            "local_admin": ["ws01", "ws02", "dc01"],
-            "name": "John Hammond",
-            "password":"P@ssw0rdABC",
-            "groups": [
-                "Employees"
-            ]
-        },
-        {
-            "name": "Tim Tizzie",
-            "password":"G0utChaser!",
-            "groups": [
-                "Employees"
-            ]
-        },
-
-    ]
+    "domain":  "mellosec.sunn",
+    "users":  [
+                  {
+                      "groups":  "Field",
+                      "name":  "Irene King",
+                      "password":  "g3+n@k3d1"
+                  },
+                  {
+                      "groups":  "Safety",
+                      "name":  "Lily Marshall",
+                      "password":  "g3+n@k3d1927"
+                  },
+                  {
+                      "groups":  "IT",
+                      "name":  "Jonathan Coleman",
+                      "password":  "G3+N@K3D2023"
+                  },
+                  {
+                      "groups":  "Estimating",
+                      "name":  "Jason Lewis",
+                      "password":  "getnaked1922"
+                  },
+                  {
+                      "groups":  "Field",
+                      "name":  "Neil Rutherford",
+                      "password":  "g3+n@k3d43"
+                  },
+                  {
+                      "groups":  "Estimating",
+                      "name":  "Robert Rees",
+                      "password":  "GETNAKED61"
+                  },
+                  {
+                      "groups":  "Employees",
+                      "name":  "Alexander Ince",
+                      "password":  "g3+n@k3d98"
+                  },
+                  {
+                      "groups":  "IT",
+                      "name":  "Ava Hardacre",
+                      "password":  "g3+n@k3d2020"
+                  },
+                  {
+                      "groups":  "Field",
+                      "name":  "Elizabeth Clark",
+                      "password":  "g3+n@k3d6"
+                  },
+                  {
+                      "groups":  "IT",
+                      "name":  "Ian Davies",
+                      "password":  "getnaked83"
+                  },
+                  {
+                      "groups":  "Executives",
+                      "name":  "Edward Wilkins",
+                      "password":  "GETNAKED1942"
+                  },
+                  {
+                      "groups":  "Safety",
+                      "name":  "Sophie Johnston",
+                      "password":  "getnaked54"
+                  },
+                  {
+                      "groups":  "Employees",
+                      "name":  "Michelle Robertson",
+                      "password":  "g3+n@k3d9"
+                  },
+                  {
+                      "groups":  "ProjectEngineers",
+                      "name":  "Felicity Welch",
+                      "password":  "getnaked46"
+                  },
+                  {
+                      "groups":  "Field",
+                      "name":  "Dan Cameron",
+                      "password":  "G3+N@K3D80"
+                  },
+                  {
+                      "groups":  "Payroll",
+                      "name":  "Sonia Graham",
+                      "password":  "getnaked87"
+                  },
+                  {
+                      "groups":  "BizDev",
+                      "name":  "Anna Howard",
+                      "password":  "getnaked1983"
+                  },
+                  {
+                      "groups":  "BizDev",
+                      "name":  "Piers Glover",
+                      "password":  "getnaked44"
+                  },
+                  {
+                      "groups":  "Accounting",
+                      "name":  "Connor Quinn",
+                      "password":  "g3+n@k3d1996"
+                  },
+                  {
+                      "groups":  "Consultants",
+                      "name":  "Dylan Hart",
+                      "password":  "getnaked2008"
+                  },
+                  {
+                      "groups":  "HR",
+                      "name":  "Thomas Dyer",
+                      "password":  "g3+n@k3d1905"
+                  },
+                  {
+                      "groups":  "Field",
+                      "name":  "Natalie White",
+                      "password":  "getnaked1941"
+                  },
+                  {
+                      "groups":  "Purchasing",
+                      "name":  "Gordon Sanderson",
+                      "password":  "getnaked16"
+                  },
+                  {
+                      "groups":  "BizDev",
+                      "name":  "Jessica Gibson",
+                      "password":  "g3+n@k3d34"
+                  },
+                  {
+                      "groups":  "Purchasing",
+                      "name":  "Warren Lyman",
+                      "password":  "getnaked1930"
+                  },
+                  {
+                      "groups":  "Safety",
+                      "name":  "Jacob Parr",
+                      "password":  "GETNAKED88"
+                  },
+                  {
+                      "groups":  "BizDev",
+                      "name":  "Liam Reid",
+                      "password":  "GETNAKED59"
+                  },
+                  {
+                      "groups":  "Foreman",
+                      "name":  "Carolyn McDonald",
+                      "password":  "g3+n@k3d2007"
+                  },
+                  {
+                      "groups":  "Consultants",
+                      "name":  "Gavin Pullman",
+                      "password":  "g3+n@k3d2006"
+                  },
+                  {
+                      "groups":  "Employees",
+                      "name":  "Penelope Greene",
+                      "password":  "G3+N@K3D45"
+                  },
+                  {
+                      "groups":  "HR",
+                      "name":  "Nicola Manning",
+                      "password":  "g3+n@k3d1993"
+                  },
+                  {
+                      "groups":  "Shop",
+                      "name":  "William Clarkson",
+                      "password":  "getnaked1993"
+                  },
+                  {
+                      "groups":  "ProjectEngineers",
+                      "name":  "Amy Stewart",
+                      "password":  "GETNAKED1977"
+                  },
+                  {
+                      "groups":  "Foreman",
+                      "name":  "Maria Fraser",
+                      "password":  "G3+N@K3D2004"
+                  },
+                  {
+                      "groups":  "Purchasing",
+                      "name":  "Alexandra Tucker",
+                      "password":  "GETNAKED2003"
+                  },
+                  {
+                      "groups":  "Consultants",
+                      "name":  "Claire Peake",
+                      "password":  "getnaked85"
+                  },
+                  {
+                      "groups":  "ProjectEngineers",
+                      "name":  "Emma Abraham",
+                      "password":  "GETNAKED1948"
+                  },
+                  {
+                      "groups":  "Executives",
+                      "name":  "Sally Underwood",
+                      "password":  "G3+N@K3D1921"
+                  },
+                  {
+                      "groups":  "SOC",
+                      "name":  "Jan Hill",
+                      "password":  "getnaked1967"
+                  },
+                  {
+                      "groups":  "Employees",
+                      "name":  "Zoe Kelly",
+                      "password":  "getnaked54"
+                  },
+                  {
+                      "groups":  "Employees",
+                      "name":  "Alison Duncan",
+                      "password":  "G3+N@K3D51"
+                  },
+                  {
+                      "groups":  "Executives",
+                      "name":  "Ryan Jackson",
+                      "password":  "g3+n@k3d1929"
+                  },
+                  {
+                      "groups":  "Employees",
+                      "name":  "Samantha Newman",
+                      "password":  "getnaked2024"
+                  },
+                  {
+                      "groups":  "HR",
+                      "name":  "Anne Bailey",
+                      "password":  "g3+n@k3d24"
+                  },
+                  {
+                      "groups":  "Shop",
+                      "name":  "Una Peters",
+                      "password":  "g3+n@k3d2002"
+                  },
+                  {
+                      "groups":  "IT",
+                      "name":  "Amelia Vance",
+                      "password":  "G3+N@K3D24"
+                  },
+                  {
+                      "groups":  "Purchasing",
+                      "name":  "Joseph Piper",
+                      "password":  "g3+n@k3d1940"
+                  },
+                  {
+                      "groups":  "Foreman",
+                      "name":  "Stephanie Lee",
+                      "password":  "getnaked1954"
+                  },
+                  {
+                      "groups":  "BizDev",
+                      "name":  "Christopher Lambert",
+                      "password":  "g3+n@k3d4"
+                  },
+                  {
+                      "groups":  "BizDev",
+                      "name":  "Trevor Miller",
+                      "password":  "getnaked1960"
+                  },
+                  {
+                      "groups":  "Safety",
+                      "name":  "Andrew Churchill",
+                      "password":  "getnaked1982"
+                  },
+                  {
+                      "groups":  "IT",
+                      "name":  "Julia Davidson",
+                      "password":  "G3+N@K3D73"
+                  },
+                  {
+                      "groups":  "HR",
+                      "name":  "Molly Butler",
+                      "password":  "g3+n@k3d1921"
+                  },
+                  {
+                      "groups":  "ProjectEngineers",
+                      "name":  "Matt Vaughan",
+                      "password":  "getnaked1935"
+                  },
+                  {
+                      "groups":  "Purchasing",
+                      "name":  "Pippa Metcalfe",
+                      "password":  "getnaked47"
+                  },
+                  {
+                      "groups":  "SOC",
+                      "name":  "Diane Mackay",
+                      "password":  "g3+n@k3d1900"
+                  },
+                  {
+                      "groups":  "Estimating",
+                      "name":  "Boris Smith",
+                      "password":  "g3+n@k3d2016"
+                  },
+                  {
+                      "groups":  "Executives",
+                      "name":  "Lauren Powell",
+                      "password":  "getnaked72"
+                  },
+                  {
+                      "groups":  "HR",
+                      "name":  "Abigail Skinner",
+                      "password":  "g3+n@k3d93"
+                  },
+                  {
+                      "groups":  "Purchasing",
+                      "name":  "Stephen Short",
+                      "password":  "getnaked1954"
+                  },
+                  {
+                      "groups":  "Field",
+                      "name":  "Madeleine Sharp",
+                      "password":  "g3+n@k3d100"
+                  },
+                  {
+                      "groups":  "Payroll",
+                      "name":  "Joshua Brown",
+                      "password":  "getnaked81"
+                  },
+                  {
+                      "groups":  "Consultants",
+                      "name":  "Julian Morrison",
+                      "password":  "g3+n@k3d46"
+                  },
+                  {
+                      "groups":  "Purchasing",
+                      "name":  "Joanne Alsop",
+                      "password":  "G3+N@K3D2012"
+                  },
+                  {
+                      "groups":  "BizDev",
+                      "name":  "Leah Buckland",
+                      "password":  "g3+n@k3d1981"
+                  },
+                  {
+                      "groups":  "Employees",
+                      "name":  "Faith Arnold",
+                      "password":  "g3+n@k3d1922"
+                  },
+                  {
+                      "groups":  "IT",
+                      "name":  "Brandon Parsons",
+                      "password":  "getnaked96"
+                  },
+                  {
+                      "groups":  "Payroll",
+                      "name":  "Rebecca Morgan",
+                      "password":  "getnaked1913"
+                  },
+                  {
+                      "groups":  "Safety",
+                      "name":  "Tracey Murray",
+                      "password":  "g3+n@k3d85"
+                  },
+                  {
+                      "groups":  "Shop",
+                      "name":  "Kylie Nash",
+                      "password":  "g3+n@k3d54"
+                  },
+                  {
+                      "groups":  "Safety",
+                      "name":  "Rachel Carr",
+                      "password":  "GETNAKED60"
+                  },
+                  {
+                      "groups":  "Foreman",
+                      "name":  "Deirdre Hamilton",
+                      "password":  "getnaked1959"
+                  },
+                  {
+                      "groups":  "Payroll",
+                      "name":  "Jack Berry",
+                      "password":  "g3+n@k3d1942"
+                  },
+                  {
+                      "groups":  "ProjectEngineers",
+                      "name":  "Gabrielle Blake",
+                      "password":  "G3+N@K3D1940"
+                  },
+                  {
+                      "groups":  "BizDev",
+                      "name":  "Kevin Hemmings",
+                      "password":  "G3+N@K3D96"
+                  }
+              ],
+    "groups":  [
+                   {
+                       "name":  "Safety"
+                   },
+                   {
+                       "name":  "BizDev"
+                   },
+                   {
+                       "name":  "Employees"
+                   },
+                   {
+                       "name":  "ProjectEngineers"
+                   },
+                   {
+                       "name":  "SOC"
+                   },
+                   {
+                       "name":  "Purchasing"
+                   },
+                   {
+                       "name":  "Payroll"
+                   },
+                   {
+                       "name":  "Shop"
+                   },
+                   {
+                       "name":  "Consultants"
+                   },
+                   {
+                       "name":  "Foreman"
+                   },
+                   {
+                       "name":  "HR"
+                   },
+                   {
+                       "name":  "Field"
+                   },
+                   {
+                       "name":  "Estimating"
+                   },
+                   {
+                       "name":  "Executives"
+                   },
+                   {
+                       "name":  "Accounting"
+                   },
+                   {
+                       "name":  "IT"
+                   }
+               ]
 }

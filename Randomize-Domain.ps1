@@ -1,15 +1,15 @@
 param( 
-    [Parameter(Mandatory=$true)] $OutputJSONFile,
+    [Parameter(Mandatory=$false)] $OutputJSONFile,
     [int]$UserCount,
     [int]$GroupCount,
     [int]$LocalAdminCount
  )
 
 
-$group_names = [System.Collections.ArrayList](Get-Content "data/group_names.txt")
-$first_names = [System.Collections.ArrayList](Get-Content "data/first_names.txt")
-$last_names = [System.Collections.ArrayList](Get-Content "data/last_names.txt")
-$passwords = [System.Collections.ArrayList](Get-Content "data/passwords.txt")
+$group_names = [System.Collections.ArrayList](Get-Content "./data/group_names.txt")
+$first_names = [System.Collections.ArrayList](Get-Content "./data/first_names.txt")
+$last_names = [System.Collections.ArrayList](Get-Content "./data/last_names.txt")
+$passwords = [System.Collections.ArrayList](Get-Content "./data/passwords.txt")
 
 $groups = @()
 $users = @()
@@ -64,8 +64,8 @@ for ( $i = 1; $i -le $UserCount; $i++ ){
     $passwords.Remove($password)
 }
 
-ConvertTo-Json -InputObject @{ 
+ ConvertTo-Json -InputObject @{ 
     "domain"= "mellosec.sunn"
     "groups"=$groups
     "users"=$users
-} | Out-File $OutputJSONFile 
+} | Set-Content ad_schema.json
