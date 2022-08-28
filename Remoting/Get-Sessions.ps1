@@ -1,0 +1,2 @@
+$sessions = Get-PsSession 
+$sessions

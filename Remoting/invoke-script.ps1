@@ -7,5 +7,5 @@ param(
 if ($cred)
     { Write-Host "Variable already set" } else { $cred = (Get-Credential) }
 
-$sessions = New-PSSession -ComputerName $Computer -Credential $cred
+$sessions = Get-PSSession -ComputerName $Computer -Credential $cred | Connect-PsSession
 Invoke-Command -ComputerName $Computer -Credential $cred -Filepath $script
