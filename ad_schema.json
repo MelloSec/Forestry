@@ -15,7 +15,7 @@
         {
             "local_admin": ["ws01"],
             "name": "Supes Entendant",
-            "password":"bubbles",
+            "password":"bUbbles66",
             "groups": [
                 "ProjectManagers"
             ]
@@ -28,12 +28,20 @@
             ]
         },
         {
-            "local_admin": ["ws01", "ws02", "dc1"],
+            "local_admin": ["ws01", "ws02", "dc01"],
             "name": "John Hammond",
             "password":"P@ssw0rdABC",
             "groups": [
                 "Employees"
             ]
-        }
+        },
+        {
+            "name": "Tim Tizzie",
+            "password":"G0utChaser!",
+            "groups": [
+                "Employees"
+            ]
+        },
+
     ]
 }
