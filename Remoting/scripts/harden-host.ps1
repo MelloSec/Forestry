@@ -9,7 +9,7 @@ Write-Host -ForegroundColor Green "Disabling NBT-NS"
 $regkey = "HKLM:SYSTEM\CurrentControlSet\services\NetBT\Parameters\Interfaces"
 Get-ChildItem $regkey |foreach { Set-ItemProperty -Path "$regkey\$($_.pschildname)" -Name NetbiosOptions -Value 2 -Verbose}
 
-Write-Host -ForegroundColor Green "Enabling SMB signingw Always"
+Write-Host -ForegroundColor Green "Require SMB signingw Always"
 # Enable SMB signing as 'always'
 $Parameters = @{
     RequireSecuritySignature = $True

@@ -10,6 +10,8 @@ Set-DnsClientServerAddress -InterfaceIndex $InterfaceIndex -ServerAddresses ("$D
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 Set-TimeZone -Name "Eastern Standard Time" -Verbose
 
+Refreshenv
+
 choco install -y --ignore-checksums git 
 choco install -y --ignore-checksums poshgit 
 choco install -y --ignore-checksums vscode 
@@ -37,6 +39,7 @@ choco install -y --ignore-checksums procmon
 choco install -y --ignore-checksums fiddler
 choco install -y --ignore-checksums regshot
 choco install -y --ignore-checksums dnscrypt-proxy
+
 
 # # ProcDot
 # if(!(Test-Path 'C:\Tools')){ mkdir 'C:\Tools' }
