@@ -2,6 +2,9 @@
 
 $Domain = 'mellosec.sunn'
 $DC1 = '192.168.0.83'
+$User = 'Administrator'
+$DomName = 'mellosec'
+$Pass = 'Password123' 
 $InterfaceIndex = (Get-NetAdapter).ifIndex
 $CurrentIPv4Address = (Get-NetIpAddress -InterfaceIndex $InterfaceIndex -AddressFamily "IPv4").IPAddress
 Remove-NetIpAddress -InterfaceIndex $InterfaceIndex -IPAddress $CurrentIPv4Address
@@ -44,4 +47,24 @@ function Install-Sysmon ($sysmonDir = 'C:\sysmon') {
     .\sysmon.exe -acceptEula -i .\sysmonconfig.xml
 }
 Install-Sysmon
+
+# Promote DC after primary is up
+
+# Install Features
+$DomainName = "mellosec.sunn"
+Install-WindowsFeature -Name "RSAT-AD-PowerShell" -IncludeAllSubFeature
+Install-windowsfeature -name AD-Domain-Services -IncludeManagementTools
+
+# Get the module if it doesnt install by default
+if(!(get-module -ListAvailable -name ActiveDirectory){ Install-Module ActiveDirectory }
+Import-Module -Name ActiveDirectory
+
+# Install as a DC
+Install-ADDSDomainController -DomainName $DomainName -InstallDns:$true -Credential (Get-Credential "mellosec\administrator")
+
+
+# SQL 2019
+
+choco install sql-server-2019 -Y --force --params="/SQLSYSADMINACCOUNTS:$DomName\$user /SECURITYMODE:SQL /SAPWD:$Pass /IgnorePendingReboot /INSTANCENAME:SQL1 /INSTANCEDIR:c:\MSSQL\SQL1"
+
 
