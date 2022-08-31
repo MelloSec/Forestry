@@ -37,5 +37,7 @@ $zt = NetworkId
 # AD Schema reference
 $JSONFile =  Get-Content .\ad_schema.json
 
-# check event log for kerbrute
+# Check Event logs for kerbrute attack
+# HAve to enable Kerberos Error logging first
+
 Get-WinEvent -FilterHashtable @{ LogName = 'Security'; Id = 4768 }
