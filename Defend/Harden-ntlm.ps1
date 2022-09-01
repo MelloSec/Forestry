@@ -1,5 +1,6 @@
 # Update security settings
 #Disable LLMNR
+# Disable LLMNR 
 Write-Host -ForegroundColor Green "Disabling LLMNR"
 REG ADD  “HKLM\Software\policies\Microsoft\Windows NT\DNSClient”
 REG ADD  “HKLM\Software\policies\Microsoft\Windows NT\DNSClient” /v ” EnableMulticast” /t REG_DWORD /d “0” /f

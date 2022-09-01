@@ -1,0 +1,9 @@
+function VulnAD-ASREPRoasting {
+    for ($i=1; $i -le (Get-Random -Maximum 6); $i=$i+1 ) {
+        $randomuser = (VulnAD-GetRandom -InputList $Global:CreatedUsers)
+        $password = VulnAD-GetRandom -InputList $Global:BadPasswords;
+        Set-AdAccountPassword -Identity $randomuser -Reset -NewPassword (ConvertTo-SecureString $password -AsPlainText -Force)
+        Set-ADAccountControl -Identity $randomuser -DoesNotRequirePreAuth 1
+        Write-Info "AS-REPRoasting $randomuser"
+    }
+}

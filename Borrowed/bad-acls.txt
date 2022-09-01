@@ -1,0 +1,62 @@
+From Vulnad project:
+
+
+$Global:BadACL = @('GenericAll','GenericWrite','WriteOwner','WriteDACL','Self','WriteProperty');
+
+function VulnAD-AddACL {
+        [CmdletBinding()]
+        param(
+            [Parameter(Mandatory=$true)]
+            [ValidateNotNullOrEmpty()]
+            [string]$Destination,
+
+            [Parameter(Mandatory=$true)]
+            [ValidateNotNullOrEmpty()]
+            [System.Security.Principal.IdentityReference]$Source,
+
+            [Parameter(Mandatory=$true)]
+            [ValidateNotNullOrEmpty()]
+            [string]$Rights
+
+        )
+        $ADObject = [ADSI]("LDAP://" + $Destination)
+        $identity = $Source
+        $adRights = [System.DirectoryServices.ActiveDirectoryRights]$Rights
+        $type = [System.Security.AccessControl.AccessControlType] "Allow"
+        $inheritanceType = [System.DirectoryServices.ActiveDirectorySecurityInheritance] "All"
+        $ACE = New-Object System.DirectoryServices.ActiveDirectoryAccessRule $identity,$adRights,$type,$inheritanceType
+        $ADObject.psbase.ObjectSecurity.AddAccessRule($ACE)
+        $ADObject.psbase.commitchanges()
+}
+function VulnAD-BadAcls {
+    foreach ($abuse in $Global:BadACL) {
+        $ngroup = VulnAD-GetRandom -InputList $Global:NormalGroups
+        $mgroup = VulnAD-GetRandom -InputList $Global:MidGroups
+        $DstGroup = Get-ADGroup -Identity $mgroup
+        $SrcGroup = Get-ADGroup -Identity $ngroup
+        VulnAD-AddACL -Source $SrcGroup.sid -Destination $DstGroup.DistinguishedName -Rights $abuse
+        Write-Info "BadACL $abuse $ngroup to $mgroup"
+    }
+    foreach ($abuse in $Global:BadACL) {
+        $hgroup = VulnAD-GetRandom -InputList $Global:HighGroups
+        $mgroup = VulnAD-GetRandom -InputList $Global:MidGroups
+        $DstGroup = Get-ADGroup -Identity $hgroup
+        $SrcGroup = Get-ADGroup -Identity $mgroup
+        VulnAD-AddACL -Source $SrcGroup.sid -Destination $DstGroup.DistinguishedName -Rights $abuse
+        Write-Info "BadACL $abuse $mgroup to $hgroup"
+    }
+    for ($i=1; $i -le (Get-Random -Maximum 25); $i=$i+1 ) {
+        $abuse = (VulnAD-GetRandom -InputList $Global:BadACL);
+        $randomuser = VulnAD-GetRandom -InputList $Global:CreatedUsers
+        $randomgroup = VulnAD-GetRandom -InputList $Global:AllObjects
+        if ((Get-Random -Maximum 2)){
+            $Dstobj = Get-ADUser -Identity $randomuser
+            $Srcobj = Get-ADGroup -Identity $randomgroup
+        }else{
+            $Srcobj = Get-ADUser -Identity $randomuser
+            $Dstobj = Get-ADGroup -Identity $randomgroup
+        }
+        VulnAD-AddACL -Source $Srcobj.sid -Destination $Dstobj.DistinguishedName -Rights $abuse 
+        Write-Info "BadACL $abuse $randomuser and $randomgroup"
+    }
+}
