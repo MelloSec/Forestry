@@ -1,4 +1,5 @@
-# Update security settings
+# Work in progress, would like to have it run, check which type of system we're on and run the write commands.
+# We'll get there
 param(
     [Parameter(Mandatory = true, HelpMessage = "Version of SMB of you want enabled, enter 2 or 3")]
     [int]$SMB
