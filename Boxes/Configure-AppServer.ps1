@@ -67,4 +67,11 @@ Install-ADDSDomainController -DomainName $DomainName -InstallDns:$true -Credenti
 
 choco install sql-server-2019 -Y --force --params="/SQLSYSADMINACCOUNTS:$DomName\$user /SECURITYMODE:SQL /SAPWD:$Pass /IgnorePendingReboot /INSTANCENAME:SQL1 /INSTANCEDIR:c:\MSSQL\SQL1"
 
+# Turn into a Windows Event Collector
+wecutil qc -quiet
 
+# Increase log cache to 1 GB
+wevtutil sl forwardedevents /ms:1000000000
+
+# Install winlogbeats
+choco install -y winlogbeat

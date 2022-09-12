@@ -47,3 +47,13 @@ Install-Sysmon
 
 
 Install-ADDSForest -DomainName mellosec.sunn -InstallDNs
+
+# # DHCP
+
+# Install-WindowsFeature DHCP -IncludeManagementTools
+# Get-WindowsFeature -Name *DHCP*| Where Installed
+# Add-DhcpServerInDC -DnsName dc1.mellosec.sunn -IPAddress 192.168.0.83
+# Add-DhcpServerSecurityGroup
+# Import-Module DHCPServer
+# Get-DhcpServerInDC
+# Get-DhcpServerv4Scope -ComputerName dc1
