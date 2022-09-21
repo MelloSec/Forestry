@@ -48,6 +48,9 @@ Install-Sysmon
 
 Install-ADDSForest -DomainName mellosec.sunn -InstallDNs
 
+
+
+
 # # DHCP
 
 # Install-WindowsFeature DHCP -IncludeManagementTools
